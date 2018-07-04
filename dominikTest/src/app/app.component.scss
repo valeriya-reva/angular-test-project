@@ -1,0 +1,103 @@
+
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px,
+	'widescreen-xl': 2000px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import '../assets/scss/vendors/include-media';
+@import '../assets/scss/vendors/normalize';
+
+@import '../assets/scss/base/variables';
+@import '../assets/scss/base/functions';
+@import '../assets/scss/base/mixins';
+@import '../assets/scss/base/helpers';
+@import '../assets/scss/base/reset';
+@import '../assets/scss/base/cms-reset';
+@import '../assets/scss/base/forms';
+@import '../assets/scss/base/wp-reset';
+@import '../assets/scss/base/typography';
+
+
+#wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.container {
+	max-width: 1160px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.container-sm {
+	max-width: 1020px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.flex-lg {
+	@include media(">=tablet") {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.col-two {
+	@include media(">=tablet") {
+		width: 30%;
+		padding-right: 15px;
+	}
+	@include media(">=desktop") {
+		width:  25%;
+	}
+}
+
+.col-three {
+	@include media(">=tablet") {
+		width: 75%;
+		padding-left: 15px;
+	}
+}
+
+.col-four {
+	@include media(">=tablet") {
+		width: 70%;
+		padding-left: 15px;
+	}
+	@include media(">=desktop") {
+		width: 75%;
+	}
+}
