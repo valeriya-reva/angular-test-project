@@ -1,0 +1,68 @@
+
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px,
+	'widescreen-xl': 2000px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import '../../assets/scss/vendors/include-media';
+@import '../../assets/scss/vendors/normalize';
+
+@import '../../assets/scss/base/variables';
+@import '../../assets/scss/base/functions';
+@import '../../assets/scss/base/mixins';
+@import '../../assets/scss/base/helpers';
+@import '../../assets/scss/base/reset';
+@import '../../assets/scss/base/cms-reset';
+@import '../../assets/scss/base/forms';
+@import '../../assets/scss/base/wp-reset';
+@import '../../assets/scss/base/typography';
+
+
+.social {
+	@extend %listreset;
+	li {
+		display: inline-block;
+		vertical-aligin: middle;
+		margin-right: 5px;
+		a {
+			@include animate(background color);
+			text-decoration: none;
+			display: block;
+			border-radius:100%;
+			width: 27px;
+			height: 27px;
+			background: $blue;
+			color: $white;
+			position: 	relative;
+			border: 1px solid $blue;
+			&:hover {
+				background: none;
+				color: $blue;
+			}
+			span {
+				font-size: 16px;
+				transform: translate(-50%, -50%);
+				top: 50%;
+				left: 50%;
+				position: absolute;
+			}
+		}
+	}
+}
