@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -12,4 +12,9 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Output() onChanged = new EventEmitter();
+
+  clickMenu() {
+    this.onChanged.emit();
+  }
 }

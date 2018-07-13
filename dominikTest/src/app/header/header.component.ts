@@ -1,10 +1,9 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss', '../../assets/scss/style.scss'],
-  outputs: [menuClick]
+  styleUrls: ['./header.component.scss']
 })
 
 export class HeaderComponent implements OnInit {
@@ -14,15 +13,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  menuClick = new EventEmitter();
-
   isnavActive = false;
   
-  clickMenu() {
-    if (this.isnavActive) {
-      this.isnavActive = false;
-    } else {
-        this.isnavActive = true;
+    onChanged(){
+        this.isnavActive = !this.isnavActive;
     }
-  }
 }

@@ -1,8 +1,8 @@
-<header class="header" [ngClass]="{'nav-active': isnavActive}">
+<header class="header nav-active" [ngClass]="{'nav-active': this.isnavActive}">
   <div class="flex-lg">
     
     <div class="menu flex">
-      <app-menu></app-menu>
+      <app-menu (onChanged)="onChanged($event)"></app-menu>
       
       <div class="logo">
         <a routerLink="">Dominik Nepp</a>

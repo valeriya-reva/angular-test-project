@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { SocialComponent } from './social/social.component';
 import { NewspageComponent } from './newspage/newspage.component';
 import { MenuComponent } from './menu/menu.component';
+import { NewsWrapComponent } from './news-wrap/news-wrap.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MenuComponent } from './menu/menu.component';
     HeaderComponent,
     SocialComponent,
     NewspageComponent,
-    MenuComponent
+    MenuComponent,
+    NewsWrapComponent
   ],
   imports: [
     BrowserModule,
