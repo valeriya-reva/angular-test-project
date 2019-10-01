@@ -1,6 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { NewsWrapComponent } from './news-wrap.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'; import { NewsWrapComponent } from './news-wrap.component';
 
 describe('NewsWrapComponent', () => {
   let component: NewsWrapComponent;
