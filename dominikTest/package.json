@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --aot",
     "build": "ng build",
-    "test": "ng test",
+    "test": "echo 'No test in this project'",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
