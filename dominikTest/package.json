@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --aot",
+    "start": "ng serve --aot -o",
     "build": "ng build",
     "test": "echo 'No test in this project'",
     "lint": "ng lint",
