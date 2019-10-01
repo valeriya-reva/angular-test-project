@@ -14,8 +14,8 @@ export class HeaderComponent implements OnInit {
   }
 
   isnavActive = false;
-  
-    onChanged(){
+
+    onChanged(e) {
         this.isnavActive = !this.isnavActive;
     }
 }
